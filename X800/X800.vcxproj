@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{5EDE540A-53CD-4F2C-9843-665E836F127B}</ProjectGuid>
+    <Keyword>MFCProj</Keyword>
+    <RootNamespace>X800</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\opencv\build\include\opencv2;C:\opencv\build\include\opencv;C:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Computer\E\OpenCV\opencv\build\include\opencv2;C:\Computer\E\OpenCV\opencv\build\include\opencv;C:\Computer\E\OpenCV\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Computer\E\OpenCV\opencv\build\x64\vc15\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions);：_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>opencv_world412d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions);：_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opencv_world340.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CApplication.h" />
+    <ClInclude Include="CFont0.h" />
+    <ClInclude Include="CRange.h" />
+    <ClInclude Include="CWorkbook.h" />
+    <ClInclude Include="CWorkbooks.h" />
+    <ClInclude Include="CWorksheet.h" />
+    <ClInclude Include="CWorksheets.h" />
+    <ClInclude Include="MAlgorithm.h" />
+    <ClInclude Include="MButton.h" />
+    <ClInclude Include="MChange_bar.h" />
+    <ClInclude Include="MCom_port.h" />
+    <ClInclude Include="MCoordinate.h" />
+    <ClInclude Include="md5c.h" />
+    <ClInclude Include="MDate.h" />
+    <ClInclude Include="MFunction.h" />
+    <ClInclude Include="MInterface.h" />
+    <ClInclude Include="MInternet.h" />
+    <ClInclude Include="MPicture.h" />
+    <ClInclude Include="MPoint.h" />
+    <ClInclude Include="MScan.h" />
+    <ClInclude Include="Msocket.h" />
+    <ClInclude Include="MTab.h" />
+    <ClInclude Include="MVolume.h" />
+    <ClInclude Include="MWeight.h" />
+    <ClInclude Include="print.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="X800.h" />
+    <ClInclude Include="X800Dlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MAlgorithm.cpp" />
+    <ClCompile Include="MButton.cpp" />
+    <ClCompile Include="MChange_bar.cpp" />
+    <ClCompile Include="MCom_port.cpp" />
+    <ClCompile Include="MCoordinate.cpp" />
+    <ClCompile Include="md5c.cpp" />
+    <ClCompile Include="MDate.cpp" />
+    <ClCompile Include="MFunction.cpp" />
+    <ClCompile Include="MInterface.cpp" />
+    <ClCompile Include="MInternet.cpp" />
+    <ClCompile Include="MPicture.cpp" />
+    <ClCompile Include="MPoint.cpp" />
+    <ClCompile Include="MScan.cpp" />
+    <ClCompile Include="Msocket.cpp" />
+    <ClCompile Include="MTab.cpp" />
+    <ClCompile Include="MVolume.cpp" />
+    <ClCompile Include="MWeight.cpp" />
+    <ClCompile Include="print.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="X800.cpp" />
+    <ClCompile Include="X800Dlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="X800.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\wave5.bin" />
+    <None Include="res\wave7.bin" />
+    <None Include="res\X800.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\back-1.bmp" />
+    <Image Include="res\back-2.bmp" />
+    <Image Include="res\back-3.bmp" />
+    <Image Include="res\cancel-1.bmp" />
+    <Image Include="res\cancel-2.bmp" />
+    <Image Include="res\cancel-3.bmp" />
+    <Image Include="res\date_1.bmp" />
+    <Image Include="res\date_2.bmp" />
+    <Image Include="res\date_3.bmp" />
+    <Image Include="res\date_in_1.bmp" />
+    <Image Include="res\date_in_2.bmp" />
+    <Image Include="res\date_in_3.bmp" />
+    <Image Include="res\date_out_1.bmp" />
+    <Image Include="res\date_out_2.bmp" />
+    <Image Include="res\date_out_3.bmp" />
+    <Image Include="res\evidence.bmp" />
+    <Image Include="res\file_1.bmp" />
+    <Image Include="res\file_2.bmp" />
+    <Image Include="res\file_3.bmp" />
+    <Image Include="res\help_1.bmp" />
+    <Image Include="res\help_2.bmp" />
+    <Image Include="res\help_3.bmp" />
+    <Image Include="res\local_1.bmp" />
+    <Image Include="res\local_2.bmp" />
+    <Image Include="res\local_3.bmp" />
+    <Image Include="res\logo-3.bmp" />
+    <Image Include="res\logo.bmp" />
+    <Image Include="res\outside_1.bmp" />
+    <Image Include="res\outside_2.bmp" />
+    <Image Include="res\outside_3.bmp" />
+    <Image Include="res\p1_length.bmp" />
+    <Image Include="res\p2_wide.bmp" />
+    <Image Include="res\p3_height.bmp" />
+    <Image Include="res\p4_volume.bmp" />
+    <Image Include="res\p5_weight.bmp" />
+    <Image Include="res\p6_bar_code.bmp" />
+    <Image Include="res\p7_money.bmp" />
+    <Image Include="res\set_1.bmp" />
+    <Image Include="res\set_2.bmp" />
+    <Image Include="res\set_3.bmp" />
+    <Image Include="res\X800.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\American.wav" />
+    <Media Include="res\country_again.wav" />
+    <Media Include="res\country_fail.wav" />
+    <Media Include="res\English.wav" />
+    <Media Include="res\init_success.wav" />
+    <Media Include="res\measure_beign.wav" />
+    <Media Include="res\measure_fail.wav" />
+    <Media Include="res\measure_success.wav" />
+    <Media Include="res\no_goods.wav" />
+    <Media Include="res\scan_success.wav" />
+    <Media Include="res\volume_fail.wav" />
+    <Media Include="res\以色列.wav" />
+    <Media Include="res\加拿大.wav" />
+    <Media Include="res\印度尼西亚.wav" />
+    <Media Include="res\台湾.wav" />
+    <Media Include="res\土耳其.wav" />
+    <Media Include="res\奥地利.wav" />
+    <Media Include="res\德国.wav" />
+    <Media Include="res\意大利.wav" />
+    <Media Include="res\新加坡.wav" />
+    <Media Include="res\新西兰.wav" />
+    <Media Include="res\无国家信息.wav" />
+    <Media Include="res\日本.wav" />
+    <Media Include="res\柬埔寨.wav" />
+    <Media Include="res\比利时.wav" />
+    <Media Include="res\沙特.wav" />
+    <Media Include="res\法国.wav" />
+    <Media Include="res\泰国.wav" />
+    <Media Include="res\澳大利亚.wav" />
+    <Media Include="res\爱尔兰.wav" />
+    <Media Include="res\瑞典.wav" />
+    <Media Include="res\瑞士.wav" />
+    <Media Include="res\科威特.wav" />
+    <Media Include="res\立陶宛.wav" />
+    <Media Include="res\荷兰.wav" />
+    <Media Include="res\菲律宾.wav" />
+    <Media Include="res\葡萄牙.wav" />
+    <Media Include="res\西班牙.wav" />
+    <Media Include="res\越南.wav" />
+    <Media Include="res\阿曼.wav" />
+    <Media Include="res\韩国.wav" />
+    <Media Include="res\香港.wav" />
+    <Media Include="res\马来西亚.wav" />
+    <Media Include="res\马耳他.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Interop.BarTender">
+      <HintPath>..\..\新建文件夹 (2)\print\Interop.BarTender.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="X800.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="X800Dlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MInterface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MCoordinate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MButton.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MPicture.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MTab.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MCom_port.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MDate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MScan.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MWeight.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MInternet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MChange_bar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="md5c.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MAlgorithm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MPoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MVolume.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Msocket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CApplication.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorkbook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CFont0.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CRange.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorkbooks.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorksheets.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="print.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="X800.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="X800Dlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MInterface.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MCoordinate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MButton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MPicture.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MTab.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MCom_port.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MDate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MScan.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MWeight.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MVolume.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MInternet.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MChange_bar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="md5c.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MFunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MAlgorithm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MPoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Msocket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="print.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="X800.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\X800.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\wave5.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\wave7.bin">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\X800.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\back-1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\back-2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\back-3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\cancel-1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\cancel-2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\cancel-3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\evidence.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\file_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\file_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\file_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\help_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\help_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\help_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\logo.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\logo-3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p1_length.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p2_wide.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p3_height.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p4_volume.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p5_weight.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p6_bar_code.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\p7_money.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\set_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\set_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\set_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_in_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_in_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_in_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_out_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_out_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\date_out_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\local_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\local_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\local_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\outside_1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\outside_2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\outside_3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\init_success.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\scan_success.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\volume_fail.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\measure_fail.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\measure_success.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\measure_beign.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\country_fail.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\American.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\English.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\马来西亚.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\新加坡.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\澳大利亚.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\日本.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\韩国.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\法国.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\德国.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\西班牙.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\比利时.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\葡萄牙.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\爱尔兰.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\奥地利.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\荷兰.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\意大利.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\瑞士.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\瑞典.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\立陶宛.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\马耳他.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\加拿大.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\新西兰.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\柬埔寨.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\越南.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\泰国.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\菲律宾.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\香港.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\台湾.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\以色列.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\土耳其.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\科威特.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\阿曼.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\沙特.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\印度尼西亚.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\无国家信息.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\country_again.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\no_goods.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+  </ItemGroup>
+</Project>
