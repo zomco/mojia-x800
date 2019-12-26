@@ -84,6 +84,7 @@ void  MCoordinate::con_layer_ai()
 	b_date = { 513, 0, 587, 48 };
 	b_set  = { 597, 0, 670, 48 };			
 	b_help = { 680, 0, 756, 48 };
+	b_split = { 763, 0, 839, 0 };
 	//-------------------- picture ---------------------
 	//logo
 	p_logo = { 0, 0, 303,48 };
@@ -130,6 +131,7 @@ void MCoordinate::con_layer()
 	b_date = { transform_x(513), 0, transform_x(587), transform_x(48) };
 	b_set =  { transform_x(597), 0, transform_x(670), transform_x(48) };
 	b_help = { transform_x(680), 0, transform_x(756), transform_x(48) };
+	b_split = { transform_x(763), 0, transform_x(839), transform_x(48) };
 
 	//logo
 	p_logo = { 0, 0, transform_x(303), transform_x(48) };

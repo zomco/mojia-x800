@@ -27,6 +27,7 @@ public:
 	CRect b_date;
 	CRect b_set;
 	CRect b_help;
+	CRect b_split;
 
 	// ---------picture--------
 	CRect p_logo;
