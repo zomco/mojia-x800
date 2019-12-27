@@ -259,9 +259,13 @@
     <None Include="res\X800.rc2" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\0001.bmp" />
+    <Image Include="res\0002.bmp" />
+    <Image Include="res\0003.bmp" />
     <Image Include="res\back-1.bmp" />
     <Image Include="res\back-2.bmp" />
     <Image Include="res\back-3.bmp" />
+    <Image Include="res\bitmap41.bmp" />
     <Image Include="res\cancel-1.bmp" />
     <Image Include="res\cancel-2.bmp" />
     <Image Include="res\cancel-3.bmp" />
@@ -312,6 +316,7 @@
     <Media Include="res\measure_success.wav" />
     <Media Include="res\no_goods.wav" />
     <Media Include="res\scan_success.wav" />
+    <Media Include="res\split_success.wav" />
     <Media Include="res\volume_fail.wav" />
     <Media Include="res\以色列.wav" />
     <Media Include="res\加拿大.wav" />

@@ -311,6 +311,18 @@
     <Image Include="res\outside_3.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\bitmap41.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\0001.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\0002.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\0003.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Media Include="res\init_success.wav">
@@ -443,6 +455,9 @@
       <Filter>资源文件</Filter>
     </Media>
     <Media Include="res\no_goods.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="res\split_success.wav">
       <Filter>资源文件</Filter>
     </Media>
   </ItemGroup>
