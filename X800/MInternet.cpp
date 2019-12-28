@@ -7,6 +7,20 @@
 
 
 
+MInternetParam::MInternetParam(CString length, CString width, CString  height, CString weight, CString orderNo)
+{
+	m_length = length;
+	m_width = width;
+	m_height = height;
+	m_weight = weight;
+	m_orderNo = orderNo;
+}
+
+MInternetParam::~MInternetParam()
+{
+
+}
+
 MInternet::MInternet()
 {
 }
@@ -68,13 +82,10 @@ CString UTF8toUnicode(const char* utf8Str, UINT length)
 
 
 //对要长传的变量进行赋值操作
-void MInternet::init_http_date(CString p_length, CString p_width, CString p_height, CString p_weight, CString p_orderNo)
+void MInternet::init_http_date(CString length, CString width, CString height, CString weight, CString orderNo)
 {
-	send_length = p_length;
-	send_width = p_width;
-	send_height = p_height;
-	send_weight = p_weight;
-	send_orderNo = p_orderNo;
+	MInternetParam param = MInternetParam(length, width, height, weight, orderNo);
+	m_params.push_back(param);
 }
 
 
@@ -82,102 +93,66 @@ void MInternet::init_http_date(CString p_length, CString p_width, CString p_heig
 //这个函数值承担上传的任务，其他处理都不要在这个函数里面
 BOOL MInternet::send_date_yijida()
 {
-	//1、********************************************************************************************************
-	//解释说明
-	//测试代码id=389&weight=200&volume=34*23*22 -------- 分别代表条码、重量、长/宽/高
-	//http://47.90.96.38:8080/ForeignTradeTwo/sysback/sm.htm?id=389&weight=200&volume=34*23*22
+	CString strUrl = _T("http://47.90.96.38:8080/ForeignTradeTwo/sysback/sm.htm?");
 
-	//2、********************************************************************************************************
-	//生成上传到服务器的数据格式 ---- 发送数据前，最终要得到的数据格式
-	//send_service = str_adress + str_date;
-	CString send_service;
-	//地址
-	CString str_adress = L"http://47.90.96.38:8080/ForeignTradeTwo/sysback/sm.htm?";
-	//数据格式
-	CString str_date;
-
-	//3********************************************************************************************************
-	//数据导入
-	//条码
-	str_date += L"id=";
-	str_date += send_orderNo;
-	//重量
-	str_date += L"&weight=";
-	str_date += send_weight;
-	//尺寸
-	str_date += L"&volume=";
-	str_date += send_length;
-
-	str_date += L"*";
-	str_date += send_width;
-
-	str_date += L"*";
-	str_date += send_height;
-
-	//4********************************************************************************************************
-	//生产最终发送的数据的字符窜
-	send_service = str_adress + str_date;
+	for (int i = 0; i < m_params.size(); i++)
+	{
+		strUrl += _T("id=") + m_params[i].m_orderNo;																			// 条码
+		strUrl += _T("&weight=") + m_params[i].m_weight;																		// 重量
+		strUrl += _T("&volume=") + m_params[i].m_length + _T("*") + m_params[i].m_width + +_T("*") + m_params[i].m_height;		// 体积
+	}
 
 	//5、********************************************************************************************************
 	//解析并获取服务器基本信息
-	CString defServerName, defObjectName;
+	CString strServerName, strObjectName;
 	INTERNET_PORT   nPort;
 	DWORD dwServiceType;
-	AfxParseURL(send_service, dwServiceType, defServerName, defObjectName, nPort);
+	AfxParseURL(strUrl, dwServiceType, strServerName, strObjectName, nPort);
 
 	//MFC网络传输用的对象
 	CInternetSession session;
 	CHttpConnection *pHttpConnection = NULL;
 	CHttpFile* pFile = NULL;
 
-	//构造一个CHttpConnection对象，建立HTTP连接
-	pHttpConnection = session.GetHttpConnection(defServerName, nPort);
-
-	// HTTP_VERB_GET---- HTTP 请求类型；
-	// TEXT("/Practice/index.jsp")----指向一个包含指定的谓词的目标对象的字符串的指针。这通常是一个文件名、可执行模块或搜索说明符。
-	pFile = pHttpConnection->OpenRequest(CHttpConnection::HTTP_VERB_GET, defObjectName);
-
-	//dwServiceType这个变量就是：CHttpConnection::HTTP_VERB_POST的意思
-	//pHTTP = pHttpConnection->OpenRequest(CHttpConnection::HTTP_VERB_POST, defObjectName);
+	pHttpConnection = session.GetHttpConnection(strServerName, nPort);
+	if (pHttpConnection == NULL)
+	{
+		session.Close();
+		AfxMessageBox(_T("创建连接失败"));
+		return FALSE;
+	}
+	pFile = pHttpConnection->OpenRequest(CHttpConnection::HTTP_VERB_GET, strObjectName);
+	if (pFile == NULL)
+	{
+		pHttpConnection->Close();
+		delete pHttpConnection;
+		session.Close();
+		AfxMessageBox(_T("创建请求失败"));
+		return FALSE;
+	}
 	CString szHeaders = L"Accept: audio/x-aiff, audio/basic, audio/midi,\
                      audio/mpeg, audio/wav, image/jpeg, image/gif, image/jpg, image/png,\
                      image/mng, image/bmp, text/plain, text/html, text/htm\r\n";
-
 	pFile->AddRequestHeaders(szHeaders);
-	//发送请求 ---- 这里应该是一件发送了数据
-	//在 CHttpFile::SendRequest() 之后，一定要用 CHttpFile::QueryInfoStatusCode() 来获得请求的状态码，从而判断是否正确获得了 http 数据
 	pFile->SendRequest();
 
-	//获取状态码
 	DWORD dwRet;
 	pFile->QueryInfoStatusCode(dwRet);
 	if (dwRet != HTTP_STATUS_OK)
 	{
-		/*
-		//提示状态码
-		CString errText;
-		errText.Format(L"返回状态码错误：%d", dwRet);
-		AfxMessageBox(errText);
-		*/
-
-
+		// 请求失败
 		pFile->Close();
 		pHttpConnection->Close();
-		//指针是需要用户手动释放资源的
 		delete pFile;
 		delete pHttpConnection;
 		session.Close();
 
-		AfxMessageBox(_T("服务器异常"));
+		AfxMessageBox(_T("请求失败"));
 		return FALSE;
 	}
 	else
 	{
-		/*
-		//提示状态码
-		CString errText;
-		errText.Format(L"返回状态码：%d", dwRet);
-		*/
+		// 请求成功
 		pFile->Close();
 		pHttpConnection->Close();
 		//指针是需要用户手动释放资源的
@@ -185,6 +160,7 @@ BOOL MInternet::send_date_yijida()
 		delete pHttpConnection;
 		session.Close();
 
+		m_params.clear();
 		return TRUE;
 	}
 }

@@ -6,8 +6,22 @@
 
 #include <WinInet.h>
 #include <afxinet.h>
+#include <vector>
+using namespace std;
 
 
+class MInternetParam
+{
+public:
+	MInternetParam(CString length, CString width, CString  height, CString weight, CString orderNo);
+	~MInternetParam();
+
+	CString m_length;							// 长
+	CString m_width;							// 宽
+	CString m_height;							// 高
+	CString m_weight;							// 重量
+	CString m_orderNo;							// 条码
+};
 
 class MInternet
 {
@@ -36,22 +50,17 @@ public:
 	CString text_word = _T("8a68e8bcb7f17e106b535fd71a88baf3");//994be6
 
 	//发送数据的变量
-	CString send_type;		//类型 ---- 新增/修改
-	CString send_parcelNo;	//编号
-
-	CString send_length;	//长
-	CString send_width;		//宽
-	CString send_height;	//高
-	CString send_weight;	//重量
-	CString send_orderNo;	//条码
-
+	CString send_type;									// 类型 ---- 新增/修改
+	CString send_parcelNo;								// 编号
 
 	//对要长传的变量进行复制操作
 	void init_http_date(CString p_length, CString p_width, CString p_height, CString p_weight, CString p_orderNo);
 	
-
 	//发送数据函数
 	BOOL send_date_yijida();
 	BOOL send_date_yijida_test();
+
+private:
+	vector<MInternetParam> m_params;					// 发送参数
 };
 
